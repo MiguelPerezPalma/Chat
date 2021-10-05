@@ -29,4 +29,9 @@ public class SalaList {
 		this.salas = salas;
 	}
 	
+	public void addSala(Sala s) {
+		this.salas.add(s);
+		
+	}
+	
 }
