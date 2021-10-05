@@ -1,5 +1,11 @@
-package UA1.modelo.Usuario;
+package UA1.Chat.modelo.Usuario;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="Usuario")
 public class Usuario {
 	protected String nickname;
 

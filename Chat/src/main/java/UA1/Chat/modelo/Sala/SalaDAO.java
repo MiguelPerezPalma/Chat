@@ -1,9 +1,9 @@
-package UA1.modelo.Sala;
+package UA1.Chat.modelo.Sala;
 
 import java.util.List;
 
-import UA1.modelo.Mensaje.Mensaje;
-import UA1.modelo.Usuario.Usuario;
+import UA1.Chat.modelo.Mensaje.Mensaje;
+import UA1.Chat.modelo.Usuario.Usuario;
 
 public class SalaDAO extends Sala{
 

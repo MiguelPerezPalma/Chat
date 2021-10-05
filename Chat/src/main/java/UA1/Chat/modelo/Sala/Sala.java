@@ -1,10 +1,19 @@
-package UA1.modelo.Sala;
+package UA1.Chat.modelo.Sala;
 
 import java.util.List;
 
-import UA1.modelo.Mensaje.Mensaje;
-import UA1.modelo.Usuario.Usuario;
 
+
+import UA1.Chat.modelo.Mensaje.Mensaje;
+import UA1.Chat.modelo.Usuario.Usuario;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="Sala")
 public class Sala {
 	protected String id;
 	protected String nombre;

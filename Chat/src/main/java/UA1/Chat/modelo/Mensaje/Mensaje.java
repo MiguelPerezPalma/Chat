@@ -1,7 +1,13 @@
-package UA1.modelo.Mensaje;
+package UA1.Chat.modelo.Mensaje;
 
 import java.time.LocalDateTime;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="Mensaje")
 public class Mensaje {
 	protected String info;
 	protected LocalDateTime hmensaje;
