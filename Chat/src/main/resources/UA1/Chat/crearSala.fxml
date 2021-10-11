@@ -26,5 +26,6 @@
       <Label layoutX="65.0" layoutY="54.0" text="Introduzca El Nombre De La Sala" />
       <Button layoutX="60.0" layoutY="340.0" mnemonicParsing="false" text="Regresar A Registro De Usuario" />
       <Label layoutX="80.0" layoutY="186.0" text="Seleccione La Sala A Borrar" />
+      <Button layoutX="127.0" layoutY="261.0" mnemonicParsing="false" text="Borrar" />
    </children>
 </AnchorPane>

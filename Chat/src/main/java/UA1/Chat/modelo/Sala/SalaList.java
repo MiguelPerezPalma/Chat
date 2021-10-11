@@ -8,6 +8,7 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="SalaList")
+
 public class SalaList {
 	@XmlElement(name = "Sala", type = Sala.class)
 	private List<Sala> salas=new ArrayList<>();

@@ -8,6 +8,8 @@ import UA1.Chat.modelo.Mensaje.Mensaje;
 import UA1.Chat.modelo.Usuario.Usuario;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 
@@ -15,13 +17,15 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="Sala")
 public class Sala {
-	protected String id;
+	@XmlAttribute(name = "nombre")
 	protected String nombre;
+	@XmlElement(name = "Mensaje", type = Mensaje.class)
 	protected List<Mensaje> mensajes;
+	@XmlElement(name = "Usuario", type = Usuario.class)
 	protected List<Usuario> users;
-	public Sala(String id, String nombre, List<Mensaje> mensajes, List<Usuario> users) {
+	public Sala( String nombre, List<Mensaje> mensajes, List<Usuario> users) {
 		super();
-		this.id = id;
+		
 		this.nombre = nombre;
 		this.mensajes = mensajes;
 		this.users = users;
@@ -29,12 +33,7 @@ public class Sala {
 	public Sala() {
 		super();
 	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+
 	public String getNombre() {
 		return nombre;
 	}

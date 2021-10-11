@@ -4,31 +4,31 @@ import java.util.List;
 
 import UA1.Chat.modelo.Mensaje.Mensaje;
 import UA1.Chat.modelo.Usuario.Usuario;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 
 public class SalaDAO extends Sala{
 
 	public SalaDAO() {
 		super();
-		
+		// TODO Auto-generated constructor stub
 	}
 
 	public SalaDAO(String nombre, List<Mensaje> mensajes, List<Usuario> users) {
-		super(nombre, nombre, mensajes, users);
-		
+		super(nombre, mensajes, users);
+		// TODO Auto-generated constructor stub
 	}
-	public SalaDAO(Sala s) {
-		this.id=s.getId();
-		this.mensajes=s.getMensajes();
-		this.nombre=s.getNombre();
-		this.users=s.getUsers();
-	}
-	
+
 	public int guardar() {
-		return 0;
+		int result=0;
+		
+		return result;
 	}
 	
-	public int borrar() {
-		return 0;
+	public int eliminar() {
+		int result=0;
+		
+		return result;
 	}
-	
 }
