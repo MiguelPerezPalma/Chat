@@ -40,6 +40,13 @@ public class Mensaje {
 	public void setHmensaje(LocalDateTime hmensaje) {
 		this.hmensaje = hmensaje;
 	}
+	public Usuario getUsario() {
+		return usario;
+	}
+	public void setUsario(Usuario usario) {
+		this.usario = usario;
+	}
+	
 	
 	
 }
