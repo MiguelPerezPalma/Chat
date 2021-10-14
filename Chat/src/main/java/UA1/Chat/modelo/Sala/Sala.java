@@ -56,15 +56,7 @@ public class Sala {
     public boolean addMensaje(Mensaje e) {
         return this.mensajes.add(e);
     }
-    public void removeMensaje(Mensaje e) {
-        this.users.remove(e);
-    }
-    public boolean addUsuario(Usuario u) {
-        return this.users.add(u);
-    }
-    public void removeUsuario(Usuario u) {
-        this.users.remove(u);
-    }
+
 
     
 }

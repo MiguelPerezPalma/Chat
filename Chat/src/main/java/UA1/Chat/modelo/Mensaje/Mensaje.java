@@ -20,10 +20,12 @@ public class Mensaje {
 	@XmlAttribute(name="Usuario")
 	protected Usuario usario; 
 	
-	public Mensaje(String info, LocalDateTime hmensaje) {
+
+	public Mensaje(String info, LocalDateTime hmensaje, Usuario usario) {
 		super();
 		this.info = info;
 		this.hmensaje = hmensaje;
+		this.usario = usario;
 	}
 	public Mensaje() {
 		super();

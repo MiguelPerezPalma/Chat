@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import UA1.Chat.Utils.JAXBManager;
 import UA1.Chat.Utils.conviertefecha;
 import UA1.Chat.modelo.Mensaje.Mensaje;
+import UA1.Chat.modelo.Sala.Sala;
 import UA1.Chat.modelo.Usuario.Usuario;
+import jakarta.xml.bind.JAXBException;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -29,7 +33,8 @@ public class SecondaryController {
     private TableColumn<Mensaje, String> mhtbc;
     @FXML
     private TextArea mensajeta;
-    
+	private static Usuario us;
+	private static Sala sa;
     @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("inicio");
@@ -41,6 +46,11 @@ public class SecondaryController {
     }
     
     private void configuratable() {
+    	utbc.setCellValueFactory(cadaentrada->{
+    		SimpleStringProperty v=new SimpleStringProperty();
+    		v.setValue(cadaentrada.getValue().getNickname());
+    		return v;
+    	});
     	mutbc.setCellValueFactory(cadaentrada->{
     		SimpleStringProperty v=new SimpleStringProperty();
     		v.setValue(cadaentrada.getValue().getUsario().getNickname());
@@ -58,7 +68,24 @@ public class SecondaryController {
     	});
     	
     }
+    @FXML
+    private void enviarmensaje() {
+    	if(!mensajeta.getText().isEmpty()&& !mensajeta.getText().isBlank()) {
+    		Mensaje m=new Mensaje(mensajeta.getText(), LocalDateTime.now(), us);
+    		sa.addMensaje(m);
+    	}
+    }
     
+    @FXML
+    private void cerrarsesion() throws IOException, JAXBException {
+    	us=null;
+    	JAXBManager.saveFile(JAXBManager.getSalaList());
+    	App.setRoot("primary");
+    }
     
+    public static  void crearSala(Usuario u, Sala s) {
+    	sa=s;
+    	us=u;
+    }
 
 }

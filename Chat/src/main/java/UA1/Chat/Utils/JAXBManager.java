@@ -15,11 +15,11 @@ import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
 import UA1.Chat.modelo.Sala.Sala;
 import UA1.Chat.modelo.Sala.SalaList;
+import UA1.Chat.modelo.Usuario.Usuario;
 
 public class JAXBManager {
 	private static String file;
 	private static SalaList sls;
-
 	public static void marshal(SalaList s,String f) throws IOException, JAXBException {
 		marshal(s, new File(f));
 	}
@@ -34,7 +34,7 @@ public class JAXBManager {
 		m.marshal(s, writer);
 		writer.close();
 	}
-
+	
 	
 	public static void readXML(String url) {
 
